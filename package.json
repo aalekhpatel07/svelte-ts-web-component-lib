@@ -1,0 +1,51 @@
+{
+  "name": "example-library",
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://github.com/example/example-library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/example/example-library.git"
+  },
+  "keywords": [
+    "example",
+    "library"
+  ],
+  "author": "Example",
+  "license": "Example",
+  "bugs": {
+    "url": "https://github.com/example/example-library/issues"
+  },
+  "readme": "README.md",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "clean": "rm -rf dist",
+    "lint": "tslint -p tsconfig.json",
+    "format": "prettier --write 'src/**/*.{ts,js,json,md,svelte}'"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tsconfig/svelte": "^2.0.1",
+    "prettier": "^2.7.1",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.9.8",
+    "tslib": "^2.3.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9"
+  }
+}
